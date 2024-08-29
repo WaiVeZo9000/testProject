@@ -1,0 +1,38 @@
+body{
+  color: white;
+  background-color: rgb(25, 25, 25);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.move-icon{
+  height: 50px;
+}
+
+.move-button{
+  background-color: transparent;
+  height: 120px;
+  width: 120px;
+  border: 3px solid white;
+  border-radius: 60px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+.reset-button,
+.auto-play-button{
+  background-color: rgb(240, 240, 5);
+  color: white;
+  font-size: 30px;
+  padding: 12px 10px;
+}
+
+.result{
+  font-size: 40px;
+}
+
+.score{
+  margin-top: 60px;
+}
+
+

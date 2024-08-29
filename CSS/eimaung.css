@@ -1,0 +1,46 @@
+body
+{
+background: url("space.png");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+}
+
+label{
+    color: greenyellow;
+}
+#l1{
+    color: violet;
+}
+
+#l2{
+    color: orange;
+}
+#l3{
+    color: gold;
+}
+#l4{
+    color: skyblue;
+}
+
+#o1{
+    color:blue;
+}
+
+#o2{
+    color:red;
+}
+
+#address{
+    background-color: aqua;
+}
+
+input[type=text]
+{
+    width: 455px;
+}
+
+p{
+    color: blueviolet;
+}

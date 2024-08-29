@@ -1,0 +1,47 @@
+.side_bar{
+    position: fixed;
+    top: 55px;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    width: 85px;
+    z-index: 200;
+    cursor: pointer;
+}
+
+.side_bar_linked{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 101px;
+    flex-direction: column;
+}
+
+.side_bar_linked:hover{
+    background-color: rgb(234, 232, 232);
+}
+
+.home{
+    height: 70px;
+}
+
+.Utube{
+    height: 40px;
+}
+
+.explore{
+    height: 40px;
+}
+
+.subscription{
+    height: 40px;
+}
+
+.library{
+    height: 40px;
+}
+
+.side_bar_linked div{
+    margin-top: 5px;
+    font-size: 12px;
+}

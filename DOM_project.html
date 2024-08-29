@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document object model</title>
+    <link rel="stylesheet" href="CSS/dom.css">
+  </head>
+  <body>
+    <p>Youtube subscribe button</p>
+    <button class="js-subscribe-button subscribe-button"
+    onclick=
+    "subscribe();">Subscribe</button>
+
+    <p>Amazon shipping calculator</p>
+
+    <input class="js-calculate calculate-input"
+    placeholder="Cost of order"
+    onkeydown="
+    handleCostKeydown(event)">
+    <button class="calculate-button" onclick="
+    calculate_cost();">calculate</button>
+    <p class="js-total-cost"></p>
+
+    <button class="button1"
+    onclick="
+    CheckActiveButton('button1');">Button1</button>
+
+    <button class="button2"
+    onclick="
+    CheckActiveButton('button2');">Button2</button>
+
+    <button class="button3"
+    onclick="
+    CheckActiveButton('button3');">Button3</button>
+
+    <script>
+      let ActiveButton = null;
+
+      function CheckActiveButton(buttonId){
+        // deactivate the active button
+        if (buttonId === ActiveButton){
+          DeactivateButton(buttonId);
+          ActiveButton = null;
+        }
+        else{
+          //if clicked other buttons (if any) and activate the button
+          if (ActiveButton !== null){
+            DeactivateButton(ActiveButton);
+          }
+          ActivateButton(buttonId);
+           ActiveButton = buttonId ;
+        }
+      }
+
+      function ActivateButton(buttonId){
+        document.querySelector(`.${buttonId}`).classList.add('is_click');
+      }
+
+      function DeactivateButton(buttonId){
+        document.querySelector(`.${buttonId}`).classList.remove('is_click');
+      }
+
+
+      function handleCostKeydown(event){
+        if (event.key === 'Enter'){
+          calculate_cost();
+        }
+      }
+
+      function subscribe(){
+        const button_js = document.querySelector('.js-subscribe-button');
+      
+        if (button_js.innerText == 'Subscribe'){
+          button_js.innerHTML = 'Subscribed';
+          button_js.classList.add('is-subscribed');
+        }
+        else {
+          button_js.innerHTML = 'Subscribe';
+          button_js.classList.remove('is-subscribed');
+        }
+      }
+
+      function calculate_cost()
+      {
+        const inputElement = document.querySelector('.js-calculate');
+        let cost = Number(inputElement.value);
+        
+        if (cost < 40){
+          cost += 10;
+        }
+
+        document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+
+      }
+    </script>
+  </body>
+</html>

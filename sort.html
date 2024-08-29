@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head><title>JSON Wai</title></head>
+  <body>
+    <h3>Sorting algorithms</h3>
+
+    <script>
+        let num = [3,5,7,4,6,2,1];
+
+        console.log(num[num.length - 1]);
+
+        function BubbleSort(){
+          for (let i = 0;i < num.length - 1; i++){
+            for (let j = 0;j < num.length - i - 1; j++){
+              if(num[j] > num[j+1]){
+                let temp = num[j];
+                num[j] = num[j + 1];
+                num[j + 1] = temp;
+              }
+            }
+          }
+        }
+
+
+        function DisplaySort(){
+          for (let i = 0; i < num.length - 1; i++){
+            console.log(num[i]);
+          }
+        }
+
+
+        BubbleSort();
+        DisplaySort();
+    </script>
+
+  </body>
+</html>

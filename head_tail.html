@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>coin flip</title>
+  </head>
+  <body>
+    <p>Chose Head or Tail</p>
+    <button onclick="
+    ComputerMove('Head');">Head</button>
+    <button onclick="
+    ComputerMove('Tail');">Tail</button>
+    <p class="js-choose">You choose:</p>
+    <p class="js-result">Computer choose:</p>
+
+    <input class="js-input" placeholder="Name"
+    onkeydown="
+    if (event.key === 'Enter'){
+      NameHandle();
+    }">
+
+    <button onclick="
+    NameHandle();">submit</button>
+
+    <p class="js-output-name"></p>
+
+    <input
+    class="js-input1" onkeyup="
+    OnkeyUp();">
+    <p class="js-demo"></p>
+
+    <script>
+      function NameHandle(){
+        const inputName = document.querySelector('.js-input');
+        let name = inputName.value;
+        document.querySelector('.js-output-name').innerHTML = `Your name is ${name}`;
+      }
+
+      function OnkeyUp(){
+        const inputWord = document.querySelector('.js-input1');
+        let word = inputWord.value;
+        event.key = word;
+
+        document.querySelector('.js-output-name').textContent = word;
+      }
+
+      function ComputerMove(move){
+        let random_move = Math.random()*1;
+        random_move = Math.round(random_move);
+        
+        let computer_move = '';
+        if (random_move === 0){
+          computer_move = 'Head';
+          document.querySelector('.js-result').innerHTML = `Computer choose: ${computer_move}`;
+        }
+        else if (random_move === 1){
+          computer_move = 'Tail';
+          document.querySelector('.js-result').innerHTML = `Computer choose: ${computer_move}`;
+        }
+        document.querySelector('.js-choose').innerHTML = `You choose: ${move}`;
+        console.log(computer_move);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wai's Game</title>
+  </head>
+  <body>
+    <h2>Choose the quantity </h2>
+    <button onclick=
+    "console.log(`Cart quantity: ${quantity}.`);">Show Quantity
+    </button>
+    <button onclick=
+    "quantity += 1;
+    console.log(`Cart quantity: ${quantity}.`);"
+    >Add one
+    </button>
+    <button onclick=
+    "quantity += 2;
+    console.log(`Cart quantity: ${quantity}.`);"
+    >+2
+    </button>
+    <button onclick=
+    "quantity += 3;
+    console.log(`Cart quantity: ${quantity}.`);"
+    >+3 
+    </button>
+    <button onclick=
+    "quantity = 0
+    console.log(`Cart quantity: ${quantity}.`);"
+    >Reset
+    </button>
+
+    <script>
+      let quantity = 0;
+
+    </script>
+  </body>
+</html>

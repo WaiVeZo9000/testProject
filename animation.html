@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WBG</title>
+    </head>
+    <body>
+        <h2>positioning</h2>
+        <button class="js-button"
+        onclick="Timeout();">Start</button>
+    
+        <button class="js-add-button"
+        onclick="AddToCart();">Add to cart</button>
+
+        <div class="js-container"
+        ></div>
+        <script>
+            let flag = false;
+            function Timeout(){
+                const button = document.querySelector('.js-button');
+                if (!flag){
+                    setTimeout(function(){
+                       button.innerHTML = 'Finished'; 
+                    }, 1000);
+                    button.innerHTML = 'Loading';
+                    flag = true;
+                }
+                else{
+                    setTimeout(function(){
+                        button.innerHTML = 'Start';
+                    }, 1000);
+                    
+                    button.innerHTML = 'Loading';
+                    flag = false;
+                }      
+            }
+
+            function AddToCart(){
+                let html_container = '';
+
+                setTimeout(function (){
+                    document.querySelector('.js-container').innerHTML = '';
+                }, 2000);
+
+                let html = `<p>Added</p>`;
+                html_container += html;
+
+                console.log(html_container);
+                document.querySelector('.js-container').innerHTML = html_container;
+            }
+
+        </script>
+    
+    </body>
+</html>

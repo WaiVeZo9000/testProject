@@ -1,0 +1,13 @@
+<b> = change into bold letter
+<i> = incline texts
+<u> = underline text
+<del> = draw a line in the middle
+<strike> = draw a line in the middle
+<!--   -->  commend text
+
+
+marquee tag makes a sliding animation
+In marquee we can also use attribute such direction to change direction, scrollamount to change the speed, alternate to bounce back
+
+
+file direction = ./folder name/file name

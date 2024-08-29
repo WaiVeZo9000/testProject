@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head><title>JSON Wai</title></head>
+  <body>
+    <h3>This a difference between JSON and Javascript</h3>
+
+    <script>
+      //javascript format
+      const products = {
+        name: 'socks',
+        price: 29
+      };
+
+      console.log(products);
+
+      //JSON format
+      const fruits = {
+        "name": "apple",
+        "price": 34
+      };
+
+      const jsonString = JSON.stringify(fruits); //convert JSON to javascript
+
+      console.log(JSON.parse(jsonString));  //convert javascript to JSON
+    </script>
+
+  </body>
+</html>
